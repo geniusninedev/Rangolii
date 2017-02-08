@@ -1,11 +1,14 @@
 package com.geniusnine.android.rangolii;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -42,6 +45,8 @@ ListView RangoliListview;
     ArrayAdapter<String> adapter;
     String[] ragolilist={"Chowk Rangoli","Dotted Rangoli","FreeHand Rangoli","Flower Petals Rangoli","Alpana","Wooden Rangoli","Floating Rangoli","Glass Rangoli","Sanskar Rangoli","Rangoli With Vegetables",
     "Rangoli With Salt","Rangoli With Rice","Rangoli With Pulses"};
+   // private android.support.v4.widget.DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,6 +133,40 @@ ListView RangoliListview;
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
     }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch(keyCode){
+            case KeyEvent.KEYCODE_BACK:
+                /*Intent i=new Intent(this,Splash_Screen.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity;*/
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+                alertDialogBuilder.setMessage("Are you sure you want to close App?");
+                alertDialogBuilder.setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+
+                                finish();
+                            }
+                        });
+
+                alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+
+
+                            }
+                        });
+
+                //Showing the alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+                return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -173,7 +212,9 @@ ListView RangoliListview;
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        if (item.isChecked()){
+            return false;
+        }
         if (id == R.id.nav_camera) {
             Intent intro=new Intent(MainActivity.this,Intro.class);
             startActivity(intro);

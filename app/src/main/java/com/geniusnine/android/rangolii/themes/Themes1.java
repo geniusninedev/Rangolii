@@ -1,12 +1,16 @@
 package com.geniusnine.android.rangolii.themes;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
 import com.geniusnine.android.rangolii.Chowk.FragmentPagerAdapter;
+import com.geniusnine.android.rangolii.Intro;
+import com.geniusnine.android.rangolii.MainActivity;
 import com.geniusnine.android.rangolii.R;
 
 import java.util.ArrayList;
@@ -81,5 +85,17 @@ public class Themes1 extends AppCompatActivity implements
             btnImageNext.setVisibility(View.VISIBLE);
             btnImagePrevious.setVisibility(View.VISIBLE);
         }
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch(keyCode){
+            case KeyEvent.KEYCODE_BACK:
+               // Intent intro=new Intent(Themes1.this,MainActivity.class);
+                finish();
+                //startActivity(intro);
+
+                return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
