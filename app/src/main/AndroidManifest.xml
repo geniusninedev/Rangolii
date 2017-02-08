@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geniusnine.android.rangolii">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/b"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Chowk.Chowk1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Chowk Rangolis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Dotted.Dotted1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Dotted Rangolis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FreeHand.Freehand1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Free Hand Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Flower.Flower1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Flower Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Alpana.Alpana1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Alpana Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Wooden.wooden1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Wooden Rangolis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Floating.Floating1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="floating Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Glass.Glass1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Glass Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Sanskar.Sanskar1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Sanskar Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Intro"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Introduction"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Tips1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Steps"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Portraitrangoli.Portrait1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Portrait Rangolis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".themes.Themes1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="RangoliThemes"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Veg.Veg1"
+            android:label="Vegetable Rangoli"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Salt.Salt1"
+            android:label="Rangoli With Salt"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Rice.Rice1"
+            android:label="Rangoli With Rice"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Pulses.Pulses1"
+            android:label="Rangoli With Pulse"
+            android:parentActivityName=".MainActivity"></activity>
+    </application>
+
+</manifest>

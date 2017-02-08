@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <solid android:color="#EAEAEA"/>
+        <item
+
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/intro"
+            android:title="Introduction" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/a0"
+            android:title="Steps To Draw Rangoli" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/port1"
+            android:title="Portrait Rangolis" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/p11"
+            android:title="Rangoli With Themes" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+
+        </menu>
+    </item>
+
+</menu>
